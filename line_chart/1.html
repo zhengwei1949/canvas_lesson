@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+    <style>
+        #canvas{
+            border:1px solid gray;
+        }
+    </style>
+  </head>
+  <body>
+    <canvas id='canvas' width='800' height='600'></canvas>
+<script>
+      //=> 画出来坐标轴两根线
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      var padding = 30;
+      var x0 = padding;
+      var y0 = canvas.height - padding;
+      var x1 = padding;
+      var y1 = padding;
+      var x2 = canvas.width - padding;
+      var y2 = canvas.height - padding;
+      
+      //坐标轴直线
+      ctx.moveTo(x1,y1);
+      ctx.lineTo(x0,y0);
+      ctx.lineTo(x2,y2);
+      ctx.stroke();
+    </script>
+  </body>
+</html>
